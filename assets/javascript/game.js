@@ -23,7 +23,7 @@ $(document).ready(function(){
     intialize()
 
     $(".crystals").on("click", function(){
-        userScore += ($this).val();
+        userScore += ($(this).val());
         $("#score").text(userScore);
     })
 });
