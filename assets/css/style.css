@@ -1,3 +1,26 @@
+#header {
+    background-color: gray;
+    margin-bottom: 10px;
+}
+
+#directions {
+    background-color: gray;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#targetNum {
+    background-color: gray;
+    color: white;
+    margin-right: 10px;
+}
+
+#winsLosses {
+    background-color: gray;
+    color: white;
+    float: left;
+}
+
 .crystals {
     width: 100px;
     height: 100px;
@@ -7,4 +30,15 @@
 #crystals {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#yourScore {
+    background-color: gray;
+    color: white;
+}
+
+#score {
+    color: red;
+    font-weight: bolder;
+    font-size: 24px;
 }

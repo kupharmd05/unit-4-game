@@ -14,14 +14,14 @@
 <body background="assets/images/houndstooth-pattern.png">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 .mr-auto">
+            <div class="col-md-4 mr-auto" id="header">
                 <h1>Crystals Collector!</h1>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">    
-            <div class="col-md-6 .mr-auto" id="directions">
+            <div class="col-md-6 mr-auto" id="directions">
                 <p>You will be given a random number at the start of the game.</p>
                 <p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
                 <p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
@@ -32,20 +32,21 @@
     </div>        
     <div class="container">
         <div class="row">
-            <div class="col-md-3 .mr-auto">Target Number
+            <div class="col-md-3" id="targetNum">Target Number
                 <div id="randomNum">
                 </div>
             </div>
-
-            <div id="wins_loss">
-                <p>Wins: <span id="wins"></span></p>
-                <p>Losses: <span id="losses"></span></p>
+            <div class="col-md-2" id="winsLosses">
+                <div id="wins_loss">
+                    <p>Wins: <span id="wins"></span></p>
+                    <p>Losses: <span id="losses"></span></p>
+                </div>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md .mr-auto">
+            <div class="col-md mr-auto">
                 <div id="crystals">
                     <img src="assets/images/blue-crystal.jpg" class="crystals" id="blueCrystal" value=0>
                     <img src="assets/images/Kinetic_crystal.jpg" class="crystals" id="kineticCrystal" value=0>
@@ -58,13 +59,18 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3 .mr-auto">
+            <div class="col-md-3 mr-auto" id="yourScore">
                 <div>
                     <p>Your total score is: </p>
-                    <div id="score"></span></div>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-3 mr auto">
+                    <div id="score"></div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

@@ -29,7 +29,7 @@ function intialize() {
 }
 
 function reset() {
-    var userScore = 0;
+    userScore = 0;
     targetNumber = numGen(19,120);
     $("#randomNum").text(targetNumber);
     $("#score").text(userScore);
@@ -37,6 +37,13 @@ function reset() {
     $("#kineticCrystal").val(numGen(1,12));
     $("#greenCrystal").val(numGen(1,12));
     $("#redCrystal").val(numGen(1,12));
+
+    console.log(targetNumber);
+    console.log(blueCrystal.value);
+    console.log(kineticCrystal.value);
+    console.log(greenCrystal.value);
+    console.log(redCrystal.value);
+    console.log(userScore);
 }
 
 $(document).ready(function(){
@@ -53,12 +60,12 @@ $(document).ready(function(){
             losses++;
             $("#losses").text(losses);
             reset();
-        } 
-        if (userScore === targetNumber) {
+        } else if
+         (userScore === targetNumber) {
             alert("You win!");
             wins++;
             $("#wins").text(wins);
-            reset()
+            reset();
         }
     
     })
