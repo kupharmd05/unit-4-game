@@ -12,20 +12,63 @@ function intialize() {
     var losses = 0;
     var userScore = 0;
     targetNumber = numGen(19,120);
-    console.log(targetNumber);
+    
     $("#randomNum").text(targetNumber);
     $("#score").text(userScore);
     $("#blueCrystal").val(numGen(1,12));
     $("#kineticCrystal").val(numGen(1,12));
+    $("#greenCrystal").val(numGen(1,12));
+    $("#redCrystal").val(numGen(1,12));
+
+    console.log(targetNumber);
+    console.log(blueCrystal.value);
+    console.log(kineticCrystal.value);
+    console.log(greenCrystal.value);
+    console.log(redCrystal.value);
 
 }
+
+function reset() {
+    var userScore = 0;
+    targetNumber = numGen(19,120);
+    $("#randomNum").text(targetNumber);
+    $("#score").text(userScore);
+    $("#blueCrystal").val(numGen(1,12));
+    $("#kineticCrystal").val(numGen(1,12));
+    $("#greenCrystal").val(numGen(1,12));
+    $("#redCrystal").val(numGen(1,12));
+}
+
 $(document).ready(function(){
     intialize()
 
     $(".crystals").on("click", function(){
-        userScore += ($(this).val());
+         
+        userScore += parseInt($(this).val());
         $("#score").text(userScore);
+        console.log(userScore);
+
+        if (userScore > targetNumber) {
+            alert("You lost");
+            losses++;
+            $("#losses").text(losses);
+            reset();
+        } 
+        if (userScore === targetNumber) {
+            alert("You win!");
+            wins++;
+            $("#wins").text(wins);
+            reset()
+        }
+    
     })
+
+    
+   
+    
+    
+
+
 });
 
 
